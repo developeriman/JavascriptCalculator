@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript calculator 3</title>
+</head>
+<body>
+<form action="">
+First Number: <input type="text" id="value1">
+Second Number:<input type="text" id="value2">
+Operator:<select  id="operator">
+            <option value="">Select one</option>
+            <option value="add">Addition</option>
+            <option value="sub">Substraction</option>
+            <option value="mul"> Multiplication</option>
+            <option value="div"> Division</option>
+        </select>
+ <input type="button"value="Result"onclick="calc();">
+</form>
+
+    <script>
+        function calc(){
+            var a =parseInt(document.querySelector("#value1").value); 
+            var b =parseInt(document.querySelector("#value2").value); 
+            var op = document.querySelector("#operator").value; 
+  var calculator;
+
+        if(op=="add"){
+           calculator =a+b;
+        }
+        else if(op=="sub"){
+            calculator =a-b;
+        }
+        else if(op=="mul"){
+            calculator =a*b;
+        }
+        else if(op=="div"){
+            calculator =a/b;
+        }
+        else{
+            calculator ="You didn't  selected one";
+        }
+        document.querySelector("#show").innerHTML=calculator;
+    }
+    </script>
+     <div id="show"></div>
+</body>
+</html>

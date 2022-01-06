@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Calculator </title>
+    <style>
+.main{
+    width: 327px;
+    height: 332px;
+    background-color:grey;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%)translateY(-50%);
+    border: 3px solid grey;
+}
+.textview{
+    width: 305px;
+    margin: 5px;
+    font-size: 25px;
+    border:none;
+    color:white;
+    background-color: transparent;
+    background: red;
+}
+.button{
+    width:75px;
+    height: 50px;
+    cursor:pointer;
+    margin:2px; 
+    font-size: 25px;
+    border:none; 
+
+}
+    </style>
+</head>
+<body>
+    <script>
+
+    </script>
+<div class="main">
+    <form action=""name="calculator">
+        <input type="text"name="display"class="textview"disabled>
+        <table>
+            <tr>
+                <td> <input onclick="calculator.display.value+='1'" type="button"value="1"class="button"></td>
+                <td> <input onclick="calculator.display.value+='2'" type="button"value="2"class="button"></td>
+                <td> <input onclick="calculator.display.value+='3'" type="button"value="3"class="button"></td>
+                <td> <input onclick="calculator.display.value+='+'" type="button"value="+"class="button"></td>
+            </tr>
+            <tr>
+                <td> <input onclick="calculator.display.value+='4'" type="button"value="4"class="button"></td>
+                <td> <input onclick="calculator.display.value+='5'" type="button"value="5"class="button"></td>
+                <td> <input onclick="calculator.display.value+='6'" type="button"value="6"class="button"></td>
+                <td> <input onclick="calculator.display.value+='-'" type="button"value="-"class="button"></td>
+            </tr>
+            <tr>
+                <td> <input onclick="calculator.display.value+='7'" type="button"value="7"class="button"></td>
+                <td> <input onclick="calculator.display.value+='8'" type="button"value="8"class="button"></td>
+                <td> <input onclick="calculator.display.value+='9'" type="button"value="9"class="button"></td>
+                <td> <input onclick="calculator.display.value+='*'" type="button"value="x"class="button"></td>
+            </tr>
+            <tr>
+                <td> <input onclick="calculator.display.value =''" type="button"value="C"class="button"></td>
+                <td> <input onclick="calculator.display.value+='0'" type="button"value="0"class="button"></td>
+                <td> <input onclick="calculator.display.value=eval(calculator.display.value);" type="button"value="="class="button"></td>
+                <td> <input onclick="calculator.display.value+='/'" type="button"value="/"class="button"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>
